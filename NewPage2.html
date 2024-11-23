@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Story Layout with Music</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #174e5f;
+    }
+    .story-container {
+      width: 850px;
+      height: 640px;
+      position: relative;
+      overflow: hidden;
+      background-color: #0d5766;
+     
+    }
+    .story-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .next-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .next-button:hover {
+      background-color: #0056b3;
+    }
+    .play-button {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  <!-- Story Container with Image -->
+  
+  <div class="story-container">
+    <img src="img1.jpg" alt="Instagram Story Image">
+
+
+    
+      
+     
+    
+
+    <!-- Play Button to start audio -->
+    <button class="play-button" onclick="playAudio()">Play Music</button>
+
+    <!-- Next Button -->
+    <button class="next-button" onclick="goToNextPage()">Next</button>
+
+    <!-- Background Audio -->
+    <audio id="background-music" loop>
+      <source src="tumse.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  
+  </div>
+
+  <script>
+    // Function to start the audio when the user clicks "Play Music"
+    function playAudio() {
+      const audio = document.getElementById('background-music');
+      audio.play().then(() => {
+        console.log("Audio is playing...");
+      }).catch(error => {
+        console.log("Autoplay failed. Please click 'Play Music' to start.");
+      });
+    }
+
+    // Function to stop audio and go to the next page
+    function goToNextPage() {
+      const audio = document.getElementById("background-music");
+      audio.pause();  // Stop the background music
+      window.location.href = "ind2.html";  // Redirect to the next page (adjust the URL)
+    }
+  </script>
+</body>
+</html>

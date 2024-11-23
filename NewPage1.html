@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1225;
+   
+  }
+  .heart{
+    height: 100px;
+    width: 100px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+    margin-bottom: 30px;
+  }
+
+  @keyframes heart{
+    0%{
+      transform: rotate(-45deg) scale(1.07);   
+           
+    }
+    80%{
+      transform: rotate(-45deg) scale(1.0);   
+           
+    }
+   100%{
+      transform: rotate(-45deg) scale(0.8);   
+           
+    }
+  }
+  .heart:before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+
+
+  }
+  .heart:after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+  }
+  .text{
+    margin-top: 30px;
+    color: beige;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nextButton {
+    align-self: center; /* This aligns the button horizontally */
+    margin-bottom: 20px; /* Optional: Adds space from the bottom */
+  }
+
+
+
+
+
+</style>
+<body>
+ <div class="container">
+  <div class="heart"></div>
+
+
+ <div class="text"><h1>"With every beat, my heart races for you, Forever yours billu"</h1></div>
+ </div>
+
+ <!-- Next button -->
+ <button id="nextButton" onclick="window.location.href='NewPage2.html'">Next >>> </button>
+</div>
+
+
+</body>
+</html>

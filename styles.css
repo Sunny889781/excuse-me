@@ -1,0 +1,97 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffccd5; /* Light pink background */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#heart-container, #flower-container {
+    position: absolute;
+    pointer-events: none;
+}
+
+#message {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: rgb(24, 1, 1);
+    font-family: 'Cursive', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4d7f;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff3366;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.heart, .flower {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 5s infinite;
+    color: #ff3366;
+}
+
+.heart {
+    animation-duration: 7s;
+}
+
+.flower {
+    animation-duration: 6s;
+    color: #ff8c00;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-500px);
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4d7f;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3366;
+}
