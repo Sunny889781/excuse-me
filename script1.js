@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open Love Letter button functionality
     document.getElementById('openButton').addEventListener('click', () => {
         // Redirect to another webpage (can be changed to your desired URL)
-        window.location.href = "loveLetter.html"; // Replace with the URL of your love letter page
+        window.location.href = "LoveLetter.html"; // Replace with the URL of your love letter page
     });
 });
 
